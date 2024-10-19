@@ -1,0 +1,11 @@
+body{
+}
+h1,h2,h3,h4{
+    width: 100%;
+    text-align: center;
+}
+.Tarjetas{
+    background-color: #ffff;
+    border-radius: 15px;
+    padding: 1vh 1vw;
+}
