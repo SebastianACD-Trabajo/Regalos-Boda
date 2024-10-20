@@ -5,79 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="CSS/Styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        .w3-sofia {
+            font-family: Sofia, cursive;
+            }
+        .w3-tangerine {
+            font-family: 'Tangerine', serif;
+            }
+        .w3-Lobster {
+        font-family: Lobster, cursive;
+        }
+    </style>
     <title>Mi Boda</title>
 </head>
 <body>
     <!-- Navegador -->
-    <div class="w3-top w3-bar w3-white w3-padding w3-card w3-wide">
-        <a href="#home" class="w3-bar-item w3-button">Texto Ejemplo</a>
+    <div class="w3-top w3-bar w3-white w3-padding w3-card w3-wide w3-row" id="navBar">
+        <a href="#home" class="w3-bar-item w3-button w3-col s6" style="text-align: left;">Mi Boda</a>
         
         <div class="w3-right w3-hide-small">
-            <a href="#about" class="w3-bar-item w3-button">Inicio</a>
-            <a href="#menu" class="w3-bar-item w3-button">Regalos</a>
-            <a href="#contact" class="w3-bar-item w3-button">Galeria</a>
+            <div>
+                <a href="#menu" class="w3-bar-item w3-button">Regalos</a>
+                <a href="#contact" class="w3-bar-item w3-button">Galeria</a>
+            </div>
         </div>
     </div>
 
     <!-- Imagen Inicio -->
-    <div class="w3-display-container w3-text-white">
-    <img src="IMG/Casamiento.jpg" alt="Lights" style="width:100%">
-    <div class="w3-padding w3-display-middle">
-        <h1>Texto 1</h1>
-        <h4>Texto 2</h4>
-    </div>
+    <div class="w3-display-container w3-text-white ">
+        <img src="IMG/Casamiento.jpg" alt="Imagen de la boda" style="width:100%" loading="lazy">
+        <div class="w3-padding w3-display-middle">
+            <h1 class="w3-sofia">Alicia Delgado y Luis Machmar</h1>
+            <h4 class="w3-sofia">Llego el dia de nuestra boda</h4>
+        </div>
     </div>
 
     <!-- Fotos de los novios -->
     <div id="about" class="w3-padding-top-64 w3-margin-bottom">
-        <div class="w3-row" style="height: 450px">
-        
-            <div class="w3-half w3-padding-large  w3-display-container" style="height: 450px">
-                <img src="IMG/Persona.jpg" class="w3-display-middle w3-circle" width="70%">
+        <div class="w3-row">
+            <div class="w3-col s6 m6 w3-padding-large w3-display-container" style="height: 450px">
+                <img src="IMG/Persona.jpg" class="w3-display-middle w3-circle" width="70%" loading="lazy">
                 <img src="IMG/Marco.png" class="w3-display-middle" width="80%" style="margin-top: 12px;">
             </div>
             
-            <div class="w3-half w3-padding-large">
+            <div class="w3-col s6 m6 w3-padding-large">
                 <h1 class="w3-center">La Novia</h1><br>
                 <h5 class="w3-center">Frase bonita</h5>
                 <p class="w3-large">
-                The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                Aquí va una descripción sobre la novia. Puedes hablar de cómo se conocieron, su personalidad o cualquier detalle significativo.</p>
                 <p class="w3-large w3-text-grey w3-hide-medium">
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua.</p>
+                Agrega alguna información adicional que sea interesante o relevante para los invitados.</p>
             </div>
-        
         </div>
-    </div>
-    <div id="about" class="w3-padding-top-64 w3-margin-bottom">
-        <div class="w3-row" style="height: 450px">
-        
-            
-            <div class="w3-half w3-padding-large">
+
+        <div class="w3-row">
+            <div class="w3-col s6 m6 w3-padding-large">
                 <h1 class="w3-center">El Novio</h1><br>
                 <h5 class="w3-center">Frase bonita</h5>
                 <p class="w3-large">
-                The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                Aquí va una descripción sobre el novio. Al igual que con la novia, puedes personalizar con detalles importantes sobre su vida.</p>
                 <p class="w3-large w3-text-grey w3-hide-medium">
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua.</p>
+                Información adicional que ayude a contar su historia o algún detalle memorable.</p>
             </div>
         
-            <div class="w3-half w3-padding-large  w3-display-container" style="height: 450px">
-                <img src="IMG/Persona.png" class="w3-display-middle w3-circle" width="65%">
-                <img src="IMG/Marco.png" class="w3-display-middle" width="100%">
+            <div class="w3-col s6 m6 w3-padding-large w3-display-container" style="height: 450px">
+                <img src="IMG/Persona.jpg" class="w3-display-middle w3-circle" width="70%" loading="lazy">
+                <img src="IMG/Marco.png" class="w3-display-middle" width="80%" style="margin-top: 12px;">
             </div>
         </div>
     </div>
-     <div class="w3-container w3-row w3-padding-top-64">
+
+    <!-- Regalos y Galería -->
+    <div class="w3-container w3-row w3-padding-top-64">
         <!-- Regalos -->
         <div class="w3-half w3-padding">
             <div class="w3-container w3-row Tarjetas">
                 <div class="w3-col w3-padding" style="width: 33%;">
-                    <img src="IMG/Regalo.png" class="w3-grayscale-max" style="width: 100%; margin-top: 10px;">
+                    <img src="IMG/Regalo.png" class="w3-grayscale-max" style="width: 100%; margin-top: 10px;" loading="lazy">
                 </div>
                 <div class="w3-rest">
                     <h2 class="w3-center">Regalos</h2>
                     <p class="w3-large w3-center">
-                        asibhdiahbfajsodhashi
+                        Puedes incluir un enlace a la lista de regalos o sugerencias para regalar.
                     </p>
                     <div class="w3-center">
                         <button class="w3-button w3-black w3-round-xlarge">Regalar</button>       
@@ -89,19 +101,19 @@
         <div class="w3-half w3-padding">
             <div class="w3-container w3-row Tarjetas">
                 <div class="w3-col" style="width: 33%;">
-                    <img src="IMG/Galeria.png" class="w3-grayscale-max" style="width: 100%;">
+                    <img src="IMG/Galeria.png" class="w3-grayscale-max" style="width: 100%;" loading="lazy">
                 </div>
                 <div class="w3-rest">
-                    <h2 class="w3-center">Regalos</h2>
+                    <h2 class="w3-center">Galería</h2>
                     <p class="w3-large w3-center">
-                        asibhdiahbfajsodhashi
+                        Aquí puedes poner enlaces a fotos o videos de la boda, o instrucciones para los invitados.
                     </p>
                     <div class="w3-center">
-                        <button class="w3-button w3-black w3-round-xlarge">Regalar</button>       
+                        <button class="w3-button w3-black w3-round-xlarge">Ver Galería</button>       
                     </div>
                 </div>
             </div>
         </div>
-     </div>
+    </div>
 </body>
 </html>
