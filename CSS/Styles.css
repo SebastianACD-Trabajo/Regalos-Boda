@@ -1,10 +1,32 @@
-
+body{
+    background-color: #fbf5f4;
+}
+#navBar{
+    background-color: #C8A49F;
+}
 h1,h2,h3,h4{
     width: 100%;
     text-align: center;
 }
 .Tarjetas{
-    background-color: #ffff;
-    border-radius: 15px;
-    padding: 1vh 1vw;
+    background-color: #C08b89;
+    padding: 1.5rem;
+}
+.Tarjetas p{
+    font-family: 'sofia', serif;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin: 5px 0;
+}
+.T-Marco{
+    background-color: white;
+    padding: 0.75rem;
+    height: 255px;
+}
+.T-Marco img{
+    width: 100%; /* Ancho del contenedor */
+    height: 215px; /* Alto fijo de 215px */
+    object-fit: cover; /* Recorta la imagen para llenar el área sin deformarla */
+    object-position: center; /* Centra la imagen dentro del contenedor */
 }
