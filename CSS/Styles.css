@@ -1,32 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sofia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+.England{
+    font-family: "Playwrite GB S", cursive;
+}
+
+.Lobster {
+    font-family: 'Lobster', cursive;
+}
+
+.Tangerine {
+    font-family: 'Tangerine', cursive;
+}
+
+.Sofia {
+    font-family: 'Sofia', cursive;
+}
+
 body{
     background-color: #fbf5f4;
+    font-family: 'Sofia', cursive;
 }
+
+/* Mejora en la visibilidad de enlaces */
+a{
+    text-decoration: none;
+    color: #C08b89;
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: #A76766;
+}
+
+/* Estilo del navbar */
 #navBar{
     background-color: #C8A49F;
 }
+
 h1,h2,h3,h4{
     width: 100%;
     text-align: center;
+    margin: 0;
+    padding: 1rem 0;
+    font-weight: normal;
 }
+
+/* Estilo de las tarjetas */
 .Tarjetas{
     background-color: #C08b89;
     padding: 1.5rem;
+    transition: transform 0.3s ease;
 }
+
+/* Efecto hover en las tarjetas */
+.Tarjetas:hover {
+    transform: scale(1.05);
+}
+
 .Tarjetas p{
-    font-family: 'sofia', serif;
+    font-family: 'Sofia', serif;
     color: white;
     text-align: center;
     font-size: 20px;
     margin: 5px 0;
 }
+
+/* Marco de las tarjetas */
 .T-Marco{
     background-color: white;
     padding: 0.75rem;
     height: 255px;
 }
+
+/* Mejora del manejo de imágenes en las tarjetas */
 .T-Marco img{
     width: 100%; /* Ancho del contenedor */
     height: 215px; /* Alto fijo de 215px */
     object-fit: cover; /* Recorta la imagen para llenar el área sin deformarla */
     object-position: center; /* Centra la imagen dentro del contenedor */
+}
+
+/* Estilo de los títulos */
+#about h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Mejora en la visualización de links en los dispositivos móviles */
+@media screen and (max-width: 600px) {
+    .Tarjetas p {
+        font-size: 16px;
+    }
 }
