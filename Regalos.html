@@ -50,6 +50,9 @@
             padding: 1rem;
             box-sizing: border-box;
         }
+        .gift-card p{
+            min-height: 60px;
+        }
 
         @media screen and (max-width: 768px) {
             .gift-card {
@@ -164,7 +167,6 @@ regalos.forEach((regalo, index) => {
                 <img src="${regalo.img}" alt="${regalo.nombre}">
             </div>
             <p>${regalo.nombre}</p>
-            <p>Valor estimado: ${regalo.valor}</p>
         </div>
     `;
     carousel.appendChild(card);
