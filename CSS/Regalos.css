@@ -1,11 +1,11 @@
 
-#Encabezado{
+.Encabezado{
     min-height: 400px;
     background-color: #fdebf2;
-    background-image: url("IMG/PatronEncabezado.png");
+    background-image: url("/IMG/PatronEncabezado.png");
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    background-position: top center;
+    background-size: 100%;
 }
 #RegalosSeccion{
     margin: 0 auto;
@@ -78,7 +78,7 @@
     border-radius: 30% 3px 3px 3px;
     margin: 10% 0  10% 10%;
     object-fit: cover;
-    
+    object-position: right;
 }
 #LunaMiel button{
     margin-top: auto;
