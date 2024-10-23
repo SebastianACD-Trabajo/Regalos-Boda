@@ -2,7 +2,7 @@
 #Encabezado{
     min-height: 400px;
     background-color: #fdebf2;
-    background-image: url("/IMG/PatronEncabezado.png");
+    background-image: url("../IMG/PatronEncabezado.png");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100%;
