@@ -21,7 +21,8 @@
 
 body{
     background-color: #fbf5f4;
-    font-family: 'Sofia', cursive;
+    font-family: 'Playwrite GB S', cursive;
+    padding-bottom: 100px;
 }
 
 /* Mejora en la visibilidad de enlaces */
@@ -35,11 +36,6 @@ a:hover, a:focus {
     color: #A76766;
 }
 
-/* Estilo del navbar */
-#navBar{
-    background-color: #C8A49F;
-}
-
 h1,h2,h3,h4{
     width: 100%;
     text-align: center;
@@ -50,6 +46,7 @@ h1,h2,h3,h4{
 
 /* Estilo de las tarjetas */
 .Tarjetas{
+    border-radius: 3px;
     background-color: #C08b89;
     padding: 1.5rem;
     transition: transform 0.3s ease;
