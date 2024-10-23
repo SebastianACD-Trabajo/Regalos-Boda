@@ -1,0 +1,94 @@
+
+#Encabezado{
+    min-height: 400px;
+    background-color: #fdebf2;
+    background-image: url("IMG/PatronEncabezado.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+#RegalosSeccion{
+    margin: 0 auto;
+}
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.Tarjetas {
+    padding: 1.5rem;
+}
+
+.Tarjetas img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 25px;
+}
+
+.gift-card {
+    flex: 0 0 33.33%; /* Mostrar 3 tarjetas en pantallas grandes */
+    max-width: 33.33%;
+    display: none; /* Ocultar todas las tarjetas por defecto */
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.gift-card p{
+    min-height: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .gift-card {
+        flex: 0 0 50%; /* Mostrar 2 tarjetas en pantallas medianas */
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gift-card {
+        flex: 0 0 100%; /* Mostrar 1 tarjeta en pantallas pequeñas */
+        max-width: 100%;
+    }
+}
+#LunaMiel{
+    display:flex;
+    background-image: url(IMG/Flor\ 1.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 40%;
+}
+#LunaMiel p{
+    height: 50%;
+}
+#LunaMiel h1{
+    font-family: 'Tangerine', cursive;
+    font-size: 4rem;
+}
+#LunaMiel img{
+    width: 40%;
+    height: 400px;
+    border-radius: 30% 3px 3px 3px;
+    margin: 10% 0  10% 10%;
+    object-fit: cover;
+    
+}
+#LunaMiel button{
+    margin-top: auto;
+    border: 1px solid#C08b89;
+}
+#LunaMiel button:hover{
+    background-color: #C08b89 !important;
+}
+#LMDiv{
+    width: 40%;
+    height: 300px;
+    margin: 10% 10% 10% 0 ;
+}
