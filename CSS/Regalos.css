@@ -1,6 +1,8 @@
 
+.Encabezado{
     min-height: 400px;
     background-color: #fdebf2;
+    background-image: url("../IMG/PatronEncabezado.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
