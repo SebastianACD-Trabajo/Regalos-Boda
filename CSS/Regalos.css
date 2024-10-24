@@ -96,6 +96,7 @@
 }
 .w3-modal{
     min-height: 450px;
+    max-height: 90vh;
 }
 .w3-modal img{
     width: 100%;
