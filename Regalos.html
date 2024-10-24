@@ -16,7 +16,7 @@
         </p>
     </div>
     <!-- Regalos comunes-->
-    <div class=" w3-padding-top-64" style="justify-content: center !important; display: flex;">
+    <div class="w3-padding-top-64" style="justify-content: center !important; display: flex;">
         <div class="w3-col s12 m10 l8 w3-padding w3-container w3-center" id="RegalosSeccion">
             <h1>Regalos</h1>
             <p>Regálanos un detalle que representa nuestro futuro juntos</p>
@@ -43,6 +43,34 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div id="giftModal" class="w3-modal">
+        <div class="w3-modal-content w3-round">
+            <div class="w3-container w3-padding">
+                <div class="w3-container w3-row w3-padding">
+                    <div class="w3-col s12 m12 l6 w3-center">
+                        <h2 id="modalGiftName"></h2>
+                        <img id="modalGiftImg">
+                        <p id="modalGiftValue"></p>
+                    </div>
+                    <div class="w3-col s12 m12 l6 w3-center DatosBancarios">
+                        <div> 
+                            <span onclick="document.getElementById('giftModal').style.display='none'" 
+                            class="w3-button w3-display-topright">&times;</span>
+                            <h3>Datos de Transferencia</h3>
+                            <p>Número de cuenta: 123-4567890</p>
+                            <p>Banco: Banco Ejemplo</p>
+                            <p>Tipo de cuenta: Visa</p>
+                            <p>Mensaje: Regalo de Boda </p>
+                            <button onclick="document.getElementById('giftModal').style.display='none'" class="w3-button w3-round">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <script>
 const regalos = [
     { nombre: "Vino tinto especial", img: "IMG/Regalos.png", valor: "$30" },
@@ -67,7 +95,7 @@ regalos.forEach((regalo, index) => {
     card.className = 'gift-card';
     card.id = `gift-card-${index}`; // Asigna un ID único
     card.innerHTML = `
-        <div class="Tarjetas">
+        <div class="Tarjetas" onclick="openModal(${index})">
             <div class="w3-padding w3-white">
                 <img src="${regalo.img}" alt="${regalo.nombre}">
             </div>
@@ -76,6 +104,15 @@ regalos.forEach((regalo, index) => {
     `;
     carousel.appendChild(card);
 });
+
+// Función para abrir el modal con la información del regalo
+function openModal(index) {
+    const regalo = regalos[index];
+    document.getElementById('modalGiftName').innerText = regalo.nombre;
+    document.getElementById('modalGiftImg').src = regalo.img;
+    document.getElementById('modalGiftValue').innerText = `Valor: ${regalo.valor}`;
+    document.getElementById('giftModal').style.display = 'block';
+}
 
 // Función para actualizar la visibilidad de las tarjetas
 function updateCardVisibility() {
