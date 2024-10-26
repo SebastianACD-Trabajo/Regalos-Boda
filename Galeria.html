@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Imágenes</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+  <link rel="stylesheet" href="CSS/Styles.css">
+  <link rel="stylesheet" href="CSS/Galeria.css">
+</head>
+<body>
+
+    <!-- navegador -->
+        <!-- Sidebar (visible solo en pantallas pequeñas y medianas) -->
+        <nav id="mySidebar" class="w3-sidebar w3-bar-block w3-card w3-hide-large" style="width:60%; display:none;">
+            <div class="nav-avatar">
+                <a href="javascript:void(0)" onclick="closeSidebar()" class="w3-button w3-right w3-large"><img src="Icons/Close.svg" alt=""></a>
+            </div>
+            <div class="nav-navegador">
+                <a href="index.html" class="w3-bar-item w3-button">Inicio</a>
+                <a href="Regalos.html" class="w3-bar-item w3-button">Regalos</a>
+                <a href="Galeria.html" class="w3-bar-item w3-button">Galería</a>
+                <a href="Info.html" class="w3-bar-item w3-button">Informacion</a>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <header class="w3-bar w3-card w3-large">
+            <!-- Botón para abrir el sidebar (visible solo en pantallas pequeñas) -->
+            <button class="w3-bar-item w3-button w3-hide-large w3-hover-theme w3-round" onclick="openSidebar()">&#9776;</button>
+            <!-- Título a la izquierda en pantallas grandes y derecha en pequeñas -->
+            <span class="w3-bar-item w3-hide-small w3-hide-medium">Mi Boda</span>
+            <!-- Opciones de navegación a la derecha en pantallas grandes -->
+            <div class="w3-right w3-hide-small w3-hide-medium">
+                <a href="index.html" class="w3-bar-item w3-button w3-round">Inicio</a>
+                <a href="Regalos.html" class="w3-bar-item w3-button w3-round">Regalos</a>
+                <a href="Galeria.html" class="w3-bar-item w3-button w3-round">Galería</a>
+                <a href="Info.html" class="w3-bar-item w3-button w3-round">Info</a>
+            </div>
+            <!-- Título a la derecha en pantallas pequeñas -->
+            <span class="w3-bar-item w3-hide-large w3-right">Mi Boda</span>
+            </header>
+    <h2 class="w3-center">Galería de Fotos</h2>
+
+    <!-- Galería de Fotos -->
+    <div id="galleryContainer" class="w3-container w3-padding">
+        <div id="GaleriaCasamiento" class="w3-section w3-row w3-border">
+            <div>
+                <h3>Casamiento</h3>
+            </div>
+        </div>
+        <div id="GaleriaEvento" class="w3-section">
+            <h3>Evento</h3>
+        </div>
+    </div>
+
+    <!-- Modal para ver imágenes en grande -->
+    <div id="myModal" class="w3-modal" onclick="closeModal()">
+        <div class="w3-modal-content">
+            <button onclick="closeModal()" class="w3-display-topright"><img src="Icons/Close.svg"></button>
+            <img class="w3-display-middle" id="img01">
+        </div>
+    </div>
+
+<script>
+    function openSidebar() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function closeSidebar() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+    closeSidebar();
+    // Configuración de las carpetas y sus contenedores correspondientes
+    const galleries = {
+        "Casamiento": "GaleriaCasamiento",
+        "Evento": "GaleriaEvento"
+    };
+
+    // Variable para almacenar todas las imágenes
+    let allImages = [];
+
+    // Función para generar imágenes dentro de los divs específicos
+    Object.keys(galleries).forEach(folder => {
+        const containerId = galleries[folder];
+        const containerDiv = document.getElementById(containerId);
+
+        // Agregar imágenes dinámicamente
+        for (let i = 1; i <= 5; i++) { // Cambia el número 5 según la cantidad de imágenes
+            const imgLink = document.createElement('a');
+            imgLink.className = "w3-col s12 m6 l4 w3-padding w3-animate-zoom w3-hover-opacity w3-margin-bottom";
+            imgLink.onclick = function() {
+                openModal(i, folder);
+            };
+
+            const imgDiv = document.createElement('div');
+            imgDiv.className = "w3-container w3-row Tarjetas";
+
+            const imgFrame = document.createElement('div');
+            imgFrame.className = "T-Marco";
+
+            const img = document.createElement('img');
+            img.src = `Galeria/${folder}/Foto (${i}).jpg`; // Ruta de la imagen
+            img.alt = `Foto ${i} de ${folder}`;
+            img.className = "w3-image w3-round";
+            img.style.width = "100%"; // Ajusta el tamaño según necesites
+
+            // Añadir la imagen al div marco
+            imgFrame.appendChild(img);
+            imgDiv.appendChild(imgFrame);
+            imgLink.appendChild(imgDiv);
+            containerDiv.appendChild(imgLink);
+
+            // Agregar la ruta de la imagen a la lista para el modal
+            allImages.push(`Galeria/${folder}/Foto (${i}).jpg`);
+        }
+    });
+
+    // Función para abrir el modal
+    function openModal(index, folder) {
+        const modal = document.getElementById("myModal");
+        const img = document.getElementById("img01");
+
+        // Establecer la imagen en el modal
+        img.src = allImages.find(image => image.includes(`Foto (${index})`)); 
+        modal.style.display = "block"; // Mostrar el modal
+    }
+
+    // Función para cerrar el modal
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
