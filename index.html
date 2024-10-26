@@ -3,16 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
     <link rel="stylesheet" href="CSS/Styles.css">
+    <link rel="stylesheet" href="CSS/Index.css">
     <title>Mi Boda</title>
 </head>
 <body>
+    <!-- navegador -->
+        <!-- Sidebar (visible solo en pantallas pequeñas y medianas) -->
+        <nav id="mySidebar" class="w3-sidebar w3-bar-block w3-card w3-hide-large" style="width:60%; display:none;">
+            <div class="nav-avatar">
+                <a href="javascript:void(0)" onclick="closeSidebar()" class="w3-button w3-right w3-large">&times;</a>
+            </div>
+            <div class="nav-navegador">
+                <a href="index.html" class="w3-bar-item w3-button">Inicio</a>
+                <a href="Regalos.html" class="w3-bar-item w3-button">Regalos</a>
+                <a href="Galeria.html" class="w3-bar-item w3-button">Galería</a>
+                <a href="Info.html" class="w3-bar-item w3-button">Informacion</a>
+            </div>
+        </nav>
 
+        <!-- Header -->
+        <header class="w3-bar w3-card w3-large">
+            <!-- Botón para abrir el sidebar (visible solo en pantallas pequeñas) -->
+            <button class="w3-bar-item w3-button w3-hide-large w3-hover-theme w3-round" onclick="openSidebar()">&#9776;</button>
+            <!-- Título a la izquierda en pantallas grandes y derecha en pequeñas -->
+            <span class="w3-bar-item w3-hide-small w3-hide-medium">Mi Boda</span>
+            <!-- Opciones de navegación a la derecha en pantallas grandes -->
+            <div class="w3-right w3-hide-small w3-hide-medium">
+                <a href="index.html" class="w3-bar-item w3-button w3-round">Inicio</a>
+                <a href="Regalos.html" class="w3-bar-item w3-button w3-round">Regalos</a>
+                <a href="Galeria.html" class="w3-bar-item w3-button w3-round">Galería</a>
+                <a href="Info.html" class="w3-bar-item w3-button w3-round">Info</a>
+            </div>
+            <!-- Título a la derecha en pantallas pequeñas -->
+            <span class="w3-bar-item w3-hide-large w3-right">Mi Boda</span>
+        </header>
     <!-- Imagen Inicio -->
-    <div class="w3-display-container w3-text-white" id="EncabezadoInicio">
+    <div class="w3-display-container w3-text-white" id="Encabezado">
         <div class="w3-padding w3-display-middle">
-            <h1 class="England">Alicia Delgado y Luis Machmar</h1>
+            <h1 class="England">Alicia Yolanda y Luis </h1>
             <h4 class="Sofia">Llego el dia de nuestra boda</h4>
         </div>
     </div>
@@ -21,7 +52,7 @@
     <div id="about" class="w3-padding-top-64 w3-margin-bottom w3-row">
         <div class="w3-row">
             <div class="w3-col s12 m6 l5 w3-padding-large w3-display-container" style="height: 450px">
-                <img src="IMG//Galeria/Novios.jpg" class="w3-display-middle w3-circle" width="60%" loading="lazy" >
+                <img src="IMG//Galeria/Novios.jpg" class="w3-display-middle w3-circle" width="62%" loading="lazy" >
                 <img src="IMG/Marco.png" class="w3-display-middle" width="80%" >
             </div>
             
@@ -39,7 +70,7 @@
     <!-- Regalos y Galería -->
     <div class="w3-container w3-row w3-padding-top-64">
         <!-- Regalos -->
-        <a href="Regalos.html" class="w3-col s12 m6 l4 w3-padding w3-animate-zoom w3-hover-opacity">
+        <a href="Regalos.html" class="w3-col s12 m6 l4 w3-padding w3-animate-zoom w3-hover-opacity w3-margin-bottom">
             <div class="w3-container w3-row Tarjetas">
                 <div class="T-Marco">
                     <img src="IMG/Regalos.png" alt="#">
@@ -48,7 +79,7 @@
             </div>
         </a>
         <!-- Galeria -->
-        <a href="Galeria.html" class="w3-col s12 m6 l4 w3-padding w3-animate-zoom w3-hover-opacity">
+        <a href="Galeria.html" class="w3-col s12 m6 l4 w3-padding w3-animate-zoom w3-hover-opacity w3-margin-bottom">
             <div class="w3-container w3-row Tarjetas">
                 <div class="T-Marco">
                     <img src="IMG/Galeria.jpg" alt="#">
@@ -58,7 +89,7 @@
         </a>
         
         <!-- About -->
-        <a href="Info.html" class="w3-col s12 m6 l4 w3-padding w3-animate-zoom w3-hover-opacity">
+        <a href="Info.html" class="w3-col s12 m6 l4 w3-padding w3-animate-zoom w3-hover-opacity  w3-margin-bottom">
             <div class="w3-container w3-row Tarjetas">
                 <div class="T-Marco">
                     <img src="IMG/Sobre la Boda.jpg" alt="#">
@@ -67,5 +98,15 @@
             </div>
         </a>
     </div>
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+    
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+        closeSidebar();
+    </script>
 </body>
 </html>

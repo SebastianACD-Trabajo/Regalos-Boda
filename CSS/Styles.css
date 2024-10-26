@@ -24,14 +24,6 @@ body{
     font-family: 'Playwrite GB S', cursive;
     padding-bottom: 100px;
 }
-#EncabezadoInicio{
-    min-height: 500px;
-    background-image: url("../IMG/Casamiento.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
 /* Mejora en la visibilidad de enlaces */
 a{
     text-decoration: none;
@@ -50,7 +42,30 @@ h1,h2,h3,h4{
     padding: 1rem 0;
     font-weight: normal;
 }
-
+header{
+    background-color: #A76766;
+    color: white;
+    height: 45px;
+}
+header span{
+    margin: 3.5px;
+    font-size: 1.5vh;
+}
+header a{
+    margin-left: 5px;
+}
+.nav-avatar{
+    background-color: #A76766;
+    width: 100%;
+    height: 45px;
+}
+.nav-avatar a{
+    color: white;
+    height: 45px;
+}
+.nav-navegador{
+    padding: 0.8vh 0.8vw;
+}
 /* Estilo de las tarjetas */
 .Tarjetas{
     border-radius: 3px;
@@ -87,15 +102,13 @@ h1,h2,h3,h4{
     object-position: center; /* Centra la imagen dentro del contenedor */
 }
 
-/* Estilo de los títulos */
-#about h2{
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
 /* Mejora en la visualización de links en los dispositivos móviles */
 @media screen and (max-width: 600px) {
     .Tarjetas p {
         font-size: 16px;
     }
+}
+.Volver a{
+    border: #A76766 1px solid;
+    border-radius: 5px;
 }

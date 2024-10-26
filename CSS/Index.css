@@ -1,0 +1,15 @@
+
+#Encabezado{
+    min-height: 500px;
+    background-image: url("../IMG/Casamiento.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilo de los títulos */
+#about h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+}

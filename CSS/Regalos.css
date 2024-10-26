@@ -7,7 +7,6 @@
     background-attachment: fixed;
     background-size: cover;
     background-position: top right;
-    background-size: 50%;
 }
 #RegalosSeccion{
     margin: 0 auto;
@@ -80,7 +79,7 @@
     border-radius: 30% 3px 3px 3px;
     margin: 10% 0  10% 10%;
     object-fit: cover;
-    object-position: right;
+    object-position: center right;
 }
 #LunaMiel button{
     margin-top: auto;
@@ -94,15 +93,19 @@
     height: 300px;
     margin: 10% 10% 10% 0 ;
 }
+.w3-modal{
+    padding: 2.5vh 5vw;
+}
 .w3-modal-content{
+
     min-height: 450px;
-    max-height: 90vh;
+    max-height: 95vh;
 }
 .w3-modal img{
     width: 100%;
     margin: 0 auto;
-    max-width: 400px;
-    max-height: 300px;
+    max-width: 300px;
+    max-height: 200px;
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
