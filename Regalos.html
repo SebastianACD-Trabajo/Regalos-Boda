@@ -18,7 +18,7 @@
             <div class="nav-navegador">
                 <a href="index.html" class="w3-bar-item w3-button">Inicio</a>
                 <a href="Regalos.html" class="w3-bar-item w3-button">Regalos</a>
-                <a href="Galeria.html" class="w3-bar-item w3-button">Galería</a>
+                <a href="#" class="w3-bar-item w3-button">Galería</a>
                 <a href="Info.html" class="w3-bar-item w3-button">Informacion</a>
             </div>
         </nav>
@@ -33,7 +33,7 @@
             <div class="w3-right w3-hide-small w3-hide-medium">
                 <a href="index.html" class="w3-bar-item w3-button w3-round">Inicio</a>
                 <a href="Regalos.html" class="w3-bar-item w3-button w3-round">Regalos</a>
-                <a href="Galeria.html" class="w3-bar-item w3-button w3-round">Galería</a>
+                <a href="#" class="w3-bar-item w3-button w3-round">Galería</a>
                 <a href="Info.html" class="w3-bar-item w3-button w3-round">Info</a>
             </div>
             <!-- Título a la derecha en pantallas pequeñas -->
@@ -42,7 +42,7 @@
     <!-- Encabezado-->
     <div class="w3-container w3-padding-64 w3-center" id="Encabezado">
         <h1 class="England">Nuestros Regalos de Boda</h1>
-        <p class="Tangerine" style="font-size: 2.5rem;">
+        <p class="Caveat">
             Cada uno de los siguientes regalos simboliza nuestro deseo para este nuevo capítulo juntos. Si deseas contribuir, puedes hacer una transferencia equivalente al valor estimado del regalo que elijas.
         </p>
     </div>
@@ -66,8 +66,10 @@
     <!-- Aportes Luna de miel -->
     <div class="w3-padding-top-64" style="justify-content: center !important; display: flex;">
         <div class="w3-col s11 m10 l9" id="LunaMiel">
-            <img src="IMG/Luna de miel.jpg" alt="Imagen de Luna de Miel">
-            <div id="LMDiv" class="w3-container w3-center">
+            <div class="w3-half">
+                <img src="IMG/LunaMiel.png" alt="">
+            </div>
+            <div id="LMDiv" class="w3-half w3-center">
                 <h1>Luna de miel</h1>
                 <p>Aquí va una descripción de la luna de miel</p>
                 <button class="w3-button w3-round" onclick="openGiftModal('Luna de miel', 'IMG/Luna de miel.jpg', 'Aporte voluntario')">Aportar</button>
@@ -81,7 +83,7 @@
     <!-- Modal -->
     <div id="giftModal" class="w3-modal">
         <div class="w3-modal-content w3-round">
-            <div class="w3-container w3-padding">
+            <div class="w3-container">
                 <div class="w3-container w3-row w3-padding">
                     <div class="w3-col s12 m12 l6 w3-center">
                         <h2 id="modalGiftName"></h2>

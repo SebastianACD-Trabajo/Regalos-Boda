@@ -1,15 +1,24 @@
 
 #Encabezado{
-    min-height: 500px;
-    background-image: url("../IMG/Casamiento.jpg");
+    background-image: url("../IMG/EncabezadoInicio.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    margin-bottom: 64px;
+}
+#Encabezado h1{
+    margin-top: 70px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+#Encabezado h2{
+    margin-bottom: 70px;
+    font-style: bold;
+    font-size: 2.5rem;
 }
 
 /* Estilo de los títulos */
 #about h2{
-    font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
