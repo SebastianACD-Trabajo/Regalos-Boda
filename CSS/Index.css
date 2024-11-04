@@ -22,3 +22,6 @@
 #about h2{
     font-size: 2.5rem;
 }
+#about p{
+    text-align: center;
+}

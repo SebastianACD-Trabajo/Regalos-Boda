@@ -106,8 +106,8 @@
     object-position: center;
     border-radius: 5px;
 }
-.DatosBancarios {
-    padding: 32px 0;
+.w3-modal p{
+    font-family: "Roboto", sans-serif;
 }
 .DatosBancarios button{
     margin-top: auto;
