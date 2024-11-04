@@ -3,9 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+    <link rel="stylesheet" href="CSS/Styles.css">
     <title>Informacion</title>
 </head>
 <body>
     
+    <!-- navegador -->
+        <!-- Sidebar (visible solo en pantallas pequeñas y medianas) -->
+        <nav id="mySidebar" class="w3-sidebar w3-bar-block w3-card w3-hide-large" style="width:60%; display:none;">
+            <div class="nav-avatar">
+                <a href="javascript:void(0)" onclick="closeSidebar()" class="w3-button w3-right w3-large"><img src="Icons/Close.svg" alt=""></a>
+            </div>
+            <div class="nav-navegador">
+                <a href="index.html" class="w3-bar-item w3-button">Inicio</a>
+                <a href="Regalos.html" class="w3-bar-item w3-button">Regalos</a>
+                <a href="#" class="w3-bar-item w3-button">Galería</a>
+                <a href="Info.html" class="w3-bar-item w3-button">Informacion</a>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <header class="w3-bar w3-card w3-large">
+            <!-- Botón para abrir el sidebar (visible solo en pantallas pequeñas) -->
+            <button class="w3-bar-item w3-button w3-hide-large w3-hover-theme w3-round" onclick="openSidebar()">&#9776;</button>
+            <!-- Título a la izquierda en pantallas grandes y derecha en pequeñas -->
+            <span class="w3-bar-item w3-hide-small w3-hide-medium">Mi Boda</span>
+            <!-- Opciones de navegación a la derecha en pantallas grandes -->
+            <div class="w3-right w3-hide-small w3-hide-medium">
+                <a href="index.html" class="w3-bar-item w3-button w3-round">Inicio</a>
+                <a href="Regalos.html" class="w3-bar-item w3-button w3-round">Regalos</a>
+                <a href="#" class="w3-bar-item w3-button w3-round">Galería</a>
+                <a href="Info.html" class="w3-bar-item w3-button w3-round">Info</a>
+            </div>
+            <!-- Título a la derecha en pantallas pequeñas -->
+            <span class="w3-bar-item w3-hide-large w3-right">Mi Boda</span>
+        </header>
+
+    <!-- Contenido Principal -->
+    <div class="w3-container w3-padding-64">
+        <h1 class="w3-center">Información de la Boda</h1>
+        
+        <!-- Día de la Boda -->
+        <section class="w3-padding w3-card w3-margin">
+            
+            <h2>Día de la Boda</h2>
+            <p><strong>Fecha:</strong> [Fecha de la boda]</p>
+            <p><strong>Hora:</strong> [Hora de la ceremonia]</p>
+        </section>
+
+        <!-- Lugar de la Boda -->
+        <section class="w3-padding w3-card w3-margin">
+            <h2>Lugar de la Ceremonia</h2>
+            <p><strong>Ubicación:</strong> [Nombre del lugar de la ceremonia]</p>
+            <p><strong>Dirección:</strong> [Dirección del lugar de la ceremonia]</p>
+            <p><strong>Detalles:</strong> [Detalles específicos del lugar, como estacionamiento o instrucciones para llegar]</p>
+        </section>
+
+        <!-- Lugar de Celebración -->
+        <section class="w3-padding w3-card w3-margin">
+            <h2>Celebración Después de la Ceremonia</h2>
+            <p><strong>Ubicación:</strong> [Nombre del lugar de la celebración]</p>
+            <p><strong>Dirección:</strong> [Dirección del lugar de la celebración]</p>
+            <p><strong>Hora de Inicio:</strong> [Hora en que inicia la celebración]</p>
+            <p><strong>Detalles:</strong> [Información adicional, como estacionamiento o servicios]</p>
+        </section>
+
+        <!-- Itinerario del Día -->
+        <section class="w3-padding w3-card w3-margin">
+            <h2>Itinerario del Día</h2>
+            <ul>
+                <li><strong>[Hora 1]:</strong> [Actividad, como "Inicio de la ceremonia"]</li>
+                <li><strong>[Hora 2]:</strong> [Siguiente actividad]</li>
+                <li><strong>[Hora 3]:</strong> [Otra actividad, como "Inicio de la recepción"]</li>
+                <!-- Añadir más actividades según sea necesario -->
+            </ul>
+        </section>
+
+        <!-- Reglamento de Vestimenta -->
+        <section class="w3-padding w3-card w3-margin">
+            <h2>Reglamento de Vestimenta</h2>
+            <p>Por favor, vístanse acorde al código de vestimenta formal:</p>
+            <ul>
+                <li><strong>Para hombres:</strong> [Descripción del vestuario para hombres, como "traje oscuro, corbata opcional"]</li>
+                <li><strong>Para mujeres:</strong> [Descripción del vestuario para mujeres, como "vestido de noche o traje formal"]</li>
+                <li><strong>Nota especial:</strong> [Cualquier nota adicional, como evitar cierto color o estilo específico]</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+    
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+        closeSidebar();
+    </script>
 </body>
 </html>

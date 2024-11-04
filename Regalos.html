@@ -61,19 +61,21 @@
         
                 <button class="w3-button w3-display-right w3-round" id="nextBtn">&#10095;</button>
             </div>
-            Recuerde que al realizar la transferencia poner el nombre del regalo al cual coincide la transferencia.
-        </div>
+            <p>Recuerde que al realizar la transferencia debe poner el nombre del regalo al cual coincide la transferencia.</p>
+        </div> 
     </div>
     <!-- Aportes Luna de miel -->
     <div class="w3-padding-top-64" style="justify-content: center !important; display: flex;">
-        <div class="w3-padding w3-row" id="LunaMiel">
-            <div class="w3-half">
-                <img src="IMG/LunaMiel.png" alt="">
+        <div class="w3-padding w3-display-container" id="LunaMiel">
+            <div class="w3-col s4 m4 l4">
+                <img src="IMG/LunaMiel.png" class=" w3-circle">
             </div>
-            <div id="LMDiv" class="w3-col s11 m8 l6 w3-center">
-                <h1>Luna de miel</h1>
-                <button class="w3-button w3-round" onclick="openGiftModal('Luna de miel', 'IMG/Luna de miel.jpg', 'Aporte voluntario')">Aportar</button>
-            </div>
+            <section id="LMDiv" class="w3-center w3-circle w3-display-bottomright">
+                <div class="w3-container">
+                    <p>Luna de miel</p>
+                    <button class="w3-button w3-round" onclick="openGiftModal('Luna de miel', 'IMG/Luna de miel.jpg', 'Aporte voluntario')">Aportar</button>
+                </div>
+            </section>
         </div>
     </div>
     <!-- Boton de Volver -->

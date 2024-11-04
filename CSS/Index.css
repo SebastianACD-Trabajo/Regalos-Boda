@@ -11,11 +11,13 @@
     margin-top: 70px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 3rem;
+    text-shadow:1px 1px 0 white
 }
 #Encabezado h2{
     margin-bottom: 70px;
     font-style: bold;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    text-shadow:1px 1px 0 white
 }
 
 /* Estilo de los títulos */

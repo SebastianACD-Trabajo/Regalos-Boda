@@ -2,7 +2,8 @@
 #Encabezado{
     min-height: 400px;
     background-color: #fdebf2;
-    background-image: url("../IMG/PatronEncabezado.png");
+    background-image: linear-gradient(rgba(253, 235, 242, 0.5), rgba(253, 235, 242, 0.5)), 
+                      url("../IMG/PatronEncabezado.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -63,33 +64,51 @@
     }
 }
 #LunaMiel{
+    width: 80vw;
+    height: 80vw;
     display: flex;
-}
-#LunaMiel p{
-    height: 50%;
-    color: white;
 }
 #LunaMiel h1{
     font-family: 'Tangerine', cursive;
-    font-size: 11vw;
+    font-size: auto;
     color: white;
 }
 #LunaMiel img{
-    width: 200%;
-}
-#LunaMiel button{
-    background-color:#C08b89 ;
-    color: white;
-    margin-top: auto;
-    border: 1px solid#C08b89;
+    width: 250%;
 }
 #LunaMiel button:hover{
     background-color: #C08b89 !important;
 }
 #LMDiv{
-    width: 40%;
-    height: 300px;
-    margin: 10% 10% 10% 0 ;
+    width: 30vw;
+    height: 30vw;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C08b89;
+    margin: 200px 10% 10% 0 ;
+    border: #C08b89 solid 1px;
+}
+#LMDiv div{
+    width: 100%;
+}
+#LMDiv button{
+    width: 75%;
+    font-size: 70%;
+    padding: 4px 0;
+    background-color:#C08b89 ;
+    color: white;
+    margin-top: auto;
+    border: 1px solid white;
+}
+#LMDiv p{
+    font-family: 'Tangerine', cursive;
+    font-size: 6vw;
+    margin: 10px 0;
+    color: white;
+    height: auto;
+    text-align: center;
 }
 .w3-modal{
     padding: 2.5vh 5vw;

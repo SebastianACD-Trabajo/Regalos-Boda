@@ -31,7 +31,6 @@
     font-optical-sizing: auto;
     font-style: normal;
 }
-  
 body{
     background-color: #fbf5f4;
     font-family: 'Playwrite GB S', cursive;
@@ -61,10 +60,10 @@ header{
     height: 45px;
 }
 header span{
-    margin: 3.5px;
-    font-size: 3.5vh;
+    font-family: "roboto", sans-serif !important;
 }
 header a{
+    font-family: "roboto", sans-serif !important;
     margin-left: 5px;
 }
 .nav-avatar{
