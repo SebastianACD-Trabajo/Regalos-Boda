@@ -21,6 +21,9 @@
 }
 
 /* Estilo de los títulos */
+#about{
+    margin-bottom: 64px;
+}
 #about h2{
     font-size: 2.5rem;
 }
