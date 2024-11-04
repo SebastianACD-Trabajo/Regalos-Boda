@@ -65,13 +65,12 @@
     </div>
     <!-- Aportes Luna de miel -->
     <div class="w3-padding-top-64" style="justify-content: center !important; display: flex;">
-        <div class="w3-col s11 m10 l9" id="LunaMiel">
+        <div class="w3-padding w3-row" id="LunaMiel">
             <div class="w3-half">
                 <img src="IMG/LunaMiel.png" alt="">
             </div>
-            <div id="LMDiv" class="w3-half w3-center">
+            <div id="LMDiv" class="w3-col s11 m8 l6 w3-center">
                 <h1>Luna de miel</h1>
-                <p>Aquí va una descripción de la luna de miel</p>
                 <button class="w3-button w3-round" onclick="openGiftModal('Luna de miel', 'IMG/Luna de miel.jpg', 'Aporte voluntario')">Aportar</button>
             </div>
         </div>
@@ -116,87 +115,94 @@
         document.getElementById("mySidebar").style.display = "none";
     }
     closeSidebar();
-const regalos = [
-    { nombre: "Vino tinto especial", img: "IMG/Regalos.png", valor: "$30" },
-    { nombre: "Juego de toallas", img: "IMG/Regalos.png", valor: "$50" },
-    { nombre: "Cena romántica", img: "IMG/Regalos.png", valor: "$100" },
-    { nombre: "Estancia en hotel", img: "IMG/Regalos.png", valor: "$200" },
-    { nombre: "Juego de copas", img: "IMG/Regalos.png", valor: "$25" },
-    { nombre: "Set de cuchillos", img: "IMG/Regalos.png", valor: "$40" },
-    { nombre: "Planta decorativa", img: "IMG/Regalos.png", valor: "$15" },
-    { nombre: "Reloj de pared", img: "IMG/Regalos.png", valor: "$60" },
-    { nombre: "Cuadro artístico", img: "IMG/Regalos.png", valor: "$150" },
-    { nombre: "Electrodoméstico", img: "IMG/Regalos.png", valor: "$100" }
-];
+    const regalos = [
+        { nombre: "Cuadro de 'Arbol de la Vida'", img: "IMG/Regalos/Cuadro.jpg", valor: "$30.000" },
+        { nombre: "Desayuno en Copelia", img: "IMG/Regalos/Copelia.jpg", valor: "$38.000" },
+        { nombre: "Muchasa Orquídeas", img: "IMG/Regalos/Orquideas.jpg", valor: "$48.000" },
+        { nombre: "Cena en Pucon", img: "IMG/Regalos/Cena.jpg", valor: "$90.000" },
+        { nombre: "Muchos Abrazos", img: "IMG/Regalos/Abrazo.jpg", valor: "$70.000" },
+        { nombre: "Una Vuelta en Avioneta", img: "IMG/Regalos/Avioneta.jpg", valor: "$80.000" },
+        { nombre: "Un Carrito de Shein", img: "IMG/Regalos/Shein.jpg", valor: "$100.000" },
+        { nombre: "Un Carrito de Temu", img: "IMG/Regalos/Temu.jpg", valor: "$100.000" },
+        { nombre: "Dia de SPA", img: "IMG/Regalos/Spa.jpg", valor: "$105.000" },
+        { nombre: "Un Viaje a la Luna", img: "IMG/Regalos/Luna.jpg", valor: "$60.000" },
+        { nombre: "Set Terraza", img: "IMG/Regalos/Terraza.jpg", valor: "$199.990" },
+        { nombre: "Pasajes a la Serena", img: "IMG/Regalos/Serena.jpg", valor: "$220.000" },
+        { nombre: "Un Tour por Viña", img: "IMG/Regalos/Viña.jpg", valor: "$250.000" },
+        { nombre: "Un Crucero", img: "IMG/Regalos/Crucero.jpg", valor: "$250.000" },
+        { nombre: "Noche en Hotel Montaña", img: "IMG/Regalos/Hotel.jpg", valor: "$300.000" },
+        { nombre: "Entradas Concierto Luciano Pereira", img: "IMG/Regalos/Concierto.jpg", valor: "$300.000" }
+    ];
 
-function openGiftModal(name, imgSrc, value) {
-    document.getElementById('modalGiftName').textContent = name;
-    document.getElementById('modalGiftImg').src = imgSrc;
-    document.getElementById('modalGiftValue').textContent = value;
-    document.getElementById('giftModal').style.display = 'block';
-}
-const carousel = document.getElementById('giftCarousel');
-let scrollPosition = 0;
-const visibleCards = { large: 3, medium: 2, small: 1 }; // Tarjetas visibles por tamaño de pantalla
 
-// Generar tarjetas de regalos
-regalos.forEach((regalo, index) => {
-    const card = document.createElement('div');
-    card.className = 'gift-card';
-    card.id = `gift-card-${index}`; // Asigna un ID único
-    card.innerHTML = `
-        <div class="Tarjetas" onclick="openModal(${index})">
-            <div class="w3-padding w3-white">
-                <img src="${regalo.img}" alt="${regalo.nombre}">
+    function openGiftModal(name, imgSrc, value) {
+        document.getElementById('modalGiftName').textContent = name;
+        document.getElementById('modalGiftImg').src = imgSrc;
+        document.getElementById('modalGiftValue').textContent = value;
+        document.getElementById('giftModal').style.display = 'block';
+    }
+    const carousel = document.getElementById('giftCarousel');
+    let scrollPosition = 0;
+    const visibleCards = { large: 3, medium: 2, small: 1 }; // Tarjetas visibles por tamaño de pantalla
+
+    // Generar tarjetas de regalos
+    regalos.forEach((regalo, index) => {
+        const card = document.createElement('div');
+        card.className = 'gift-card';
+        card.id = `gift-card-${index}`; // Asigna un ID único
+        card.innerHTML = `
+            <div class="Tarjetas" onclick="openModal(${index})">
+                <div class="w3-padding w3-white">
+                    <img src="${regalo.img}" alt="${regalo.nombre}">
+                </div>
+                <p>${regalo.nombre}</p>
             </div>
-            <p>${regalo.nombre}</p>
-        </div>
-    `;
-    carousel.appendChild(card);
-});
+        `;
+        carousel.appendChild(card);
+    });
 
-// Función para abrir el modal con la información del regalo
-function openModal(index) {
-    const regalo = regalos[index];
-    document.getElementById('modalGiftName').innerText = regalo.nombre;
-    document.getElementById('modalGiftImg').src = regalo.img;
-    document.getElementById('modalGiftValue').innerText = `Valor: ${regalo.valor}`;
-    document.getElementById('giftModal').style.display = 'block';
-}
-
-// Función para actualizar la visibilidad de las tarjetas
-function updateCardVisibility() {
-    const width = window.innerWidth;
-    let numVisible = width > 768 ? visibleCards.large : width > 480 ? visibleCards.medium : visibleCards.small;
-
-    for (let i = 0; i < regalos.length; i++) {
-        const card = document.getElementById(`gift-card-${i}`);
-        card.style.display = (i >= scrollPosition && i < scrollPosition + numVisible) ? 'block' : 'none';
+    // Función para abrir el modal con la información del regalo
+    function openModal(index) {
+        const regalo = regalos[index];
+        document.getElementById('modalGiftName').innerText = regalo.nombre;
+        document.getElementById('modalGiftImg').src = regalo.img;
+        document.getElementById('modalGiftValue').innerText = `Valor: ${regalo.valor}`;
+        document.getElementById('giftModal').style.display = 'block';
     }
-}
 
-// Mover el carrusel a la derecha
-document.getElementById('nextBtn').onclick = () => {
-    const width = window.innerWidth;
-    let numVisible = width > 768 ? visibleCards.large : width > 480 ? visibleCards.medium : visibleCards.small;
+    // Función para actualizar la visibilidad de las tarjetas
+    function updateCardVisibility() {
+        const width = window.innerWidth;
+        let numVisible = width > 768 ? visibleCards.large : width > 480 ? visibleCards.medium : visibleCards.small;
 
-    if (scrollPosition < regalos.length - numVisible) {
-        scrollPosition++;
-        updateCardVisibility();
+        for (let i = 0; i < regalos.length; i++) {
+            const card = document.getElementById(`gift-card-${i}`);
+            card.style.display = (i >= scrollPosition && i < scrollPosition + numVisible) ? 'block' : 'none';
+        }
     }
-};
 
-// Mover el carrusel a la izquierda
-document.getElementById('prevBtn').onclick = () => {
-    if (scrollPosition > 0) {
-        scrollPosition--;
-        updateCardVisibility();
-    }
-};
+    // Mover el carrusel a la derecha
+    document.getElementById('nextBtn').onclick = () => {
+        const width = window.innerWidth;
+        let numVisible = width > 768 ? visibleCards.large : width > 480 ? visibleCards.medium : visibleCards.small;
 
-// Inicializa la visibilidad de las tarjetas
-updateCardVisibility();
-window.addEventListener('resize', updateCardVisibility); // Actualiza la visibilidad al cambiar el tamaño de la ventana
+        if (scrollPosition < regalos.length - numVisible) {
+            scrollPosition++;
+            updateCardVisibility();
+        }
+    };
+
+    // Mover el carrusel a la izquierda
+    document.getElementById('prevBtn').onclick = () => {
+        if (scrollPosition > 0) {
+            scrollPosition--;
+            updateCardVisibility();
+        }
+    };
+
+    // Inicializa la visibilidad de las tarjetas
+    updateCardVisibility();
+    window.addEventListener('resize', updateCardVisibility); // Actualiza la visibilidad al cambiar el tamaño de la ventana
 
 </script>
 </body>
