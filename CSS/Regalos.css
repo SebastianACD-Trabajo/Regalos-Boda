@@ -94,8 +94,8 @@
     width: 100%;
 }
 #LMDiv button{
-    width: 75%;
-    font-size: 70%;
+    width: 50%;
+    font-size: 1.5vw;
     padding: 4px 0;
     background-color:#C08b89 ;
     color: white;
