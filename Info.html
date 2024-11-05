@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
     <link rel="stylesheet" href="CSS/Styles.css">
     <title>Informacion</title>
+    <style>
+        iframe{
+            width: 80%;
+            min-height: 250px;
+            margin: 15px 10%;
+        }
+    </style>
 </head>
 <body>
     
@@ -29,7 +36,7 @@
             <!-- Botón para abrir el sidebar (visible solo en pantallas pequeñas) -->
             <button class="w3-bar-item w3-button w3-hide-large w3-hover-theme w3-round" onclick="openSidebar()">&#9776;</button>
             <!-- Título a la izquierda en pantallas grandes y derecha en pequeñas -->
-            <span class="w3-bar-item w3-hide-small w3-hide-medium">Mi Boda</span>
+            <span class="w3-bar-item w3-hide-small w3-hide-medium">Nuestra Boda</span>
             <!-- Opciones de navegación a la derecha en pantallas grandes -->
             <div class="w3-right w3-hide-small w3-hide-medium">
                 <a href="index.html" class="w3-bar-item w3-button w3-round">Inicio</a>
@@ -38,7 +45,7 @@
                 <a href="Info.html" class="w3-bar-item w3-button w3-round">Info</a>
             </div>
             <!-- Título a la derecha en pantallas pequeñas -->
-            <span class="w3-bar-item w3-hide-large w3-right">Mi Boda</span>
+            <span class="w3-bar-item w3-hide-large w3-right">Nuestra Boda</span>
         </header>
 
     <!-- Contenido Principal -->
@@ -54,10 +61,19 @@
         </section>
 
         <!-- Lugar de la Boda -->
-        <section class="w3-padding w3-card w3-margin">
+        <section class="w3-padding w3-card w3-margin w3-row">
             <h2>Lugar de la Ceremonia</h2>
-            <p><strong>Dirección:</strong> Avenida Arturo Pratt #570, Rio Bueno.</p>
-            <p><strong>Detalles:</strong> Frente plaza de armas.</p>
+            <div class="w3-col s12 m12 l4">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4301.029030206989!2d-72.95639524050202!3d-40.33598353784503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9616427a0aa06817%3A0x5adf1d6c8829d985!2sParroquia%20Inmaculada%20Concepci%C3%B3n!5e0!3m2!1ses-419!2scl!4v1730784418783!5m2!1ses-419!2scl" 
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="w3-col s12 m12 l8">
+                <p><strong>Lugar:</strong> Parroquia Inmaculada Concepción.</p>
+                <p><strong>Dirección:</strong> Avenida Arturo Pratt #570, Rio Bueno.</p>
+                <p><strong>Detalles:</strong> Frente plaza de armas.</p>
+            </div>
         </section>
 
         <!-- Lugar de Celebración -->
@@ -72,6 +88,7 @@
         <section class="w3-padding w3-card w3-margin">
             <h2>Itinerario del Día</h2>
             <ul>
+                <li><strong>11:15:</strong> Ceremonia</li>
                 <li><strong>13:15:</strong> LLegada de los novios al Quincho</li>
                 <li><strong>13:20:</strong> Coctel de Bienvenida</li>
                 <li><strong>15:00:</strong> Almuerzo</li>
